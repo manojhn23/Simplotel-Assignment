@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.1cap;
+  justify-content: space-around;
+  padding: 10px 10%;
+  background-color: rgba(255, 113, 113, 255);
+}
+
+.parent {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.div1 {
+  background: rgb(254, 247, 174);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 247, 174, 1) 0%,
+    rgba(255, 210, 208, 1) 100%
+  );
+
+  height: calc(100vh - 55.6px);
+  grid-area: 1 / 1 / 2 / 2;
+}
+.contents {
+  width: 80%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10%;
+  margin: 20% 10%;
+}
+
+.title {
+  font-size: 56px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2cap;
+}
+.detail {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  margin-top: 5%;
+  letter-spacing: 0.1cap;
+  line-height: 2cap;
+}
+.div2 {
+  background-image: url("imgs/pexels-robin-stickel-70497.jpg");
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: 60% -20px;
+  height: calc(100vh - 55.6px);
+  grid-area: 1 / 2 / 2 / 3;
+}
+.div3 {
+  height: 100vh;
+  grid-area: 2 / 1 / 3 / 2;
+  background: rgb(254, 247, 174);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 247, 174, 1) 0%,
+    rgba(255, 210, 208, 1) 100%
+  );
+}
+.div4 {
+  grid-area: 2 / 2 / 3 / 3;
+  background: rgb(254, 247, 174);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 210, 208, 1) 0%,
+    rgba(255, 178, 238, 255) 100%
+  );
+}
+
+button {
+  background-color: #ff7171;
+  padding: 15px 100px;
+  border: none;
+  color: white;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+.parent2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 27px;
+  grid-row-gap: 12px;
+  width: 100%;
+  height: 100%;
+}
+
+.div11 {
+  grid-area: 1 / 1 / 2 / 2;
+  background-image: url("imgs/pexels-rachel-claire-6752433.jpg");
+  object-fit: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.div21 {
+  grid-area: 2 / 1 / 3 / 2;
+  background-image: url("imgs/pexels-eva-bronzini-6141651.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.div31 {
+  grid-area: 1 / 2 / 3 / 3;
+  background-image: url("imgs/pexels-mister-mister-3434523.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.side-content {
+  width: 100%;
+  height: 100%;
+  background-color: #ff7171;
+  margin: 10% 20% 10% -12.5%;
+}
+
+.badge-title {
+  font-size: 56px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0.2cap;
+}
+
+ 
+@media only screen and (max-width: 1024px) {
+  .parent2 {
+    grid-template-columns: 1fr;
+  }
+
+  .div11,
+  .div21,
+  .div31 {
+    height: 40vh;
+  }
+
+  .side-content {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .div11,
+  .div21,
+  .div31 {
+    height: 30vh;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .div11,
+  .div21,
+  .div31 {
+    height: 20vh;
+  }
+
+  .title {
+    font-size: 1rem;
+  }
+} 
+
+ @media only screen and (min-width: 600px) and (max-width: 960px) {
+  .parent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: 100%;
+    width: 100%;
+  }
+
+  .div1,
+  .div2,
+  .div3,
+  .div4 {
+    height: 100%;
+    width: 50%;
+  }
+
+  .contents {
+    width: 80%;
+    height: 60%;
+    margin: 20% 10%;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .detail {
+    font-size: 18px;
+  }
+
+  .parent2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    width: 100%;
+    height: 100%;
+  }
+
+  .div11,
+  .div21,
+  .div31 {
+    width: 50%;
+    height: 100%;
+  }
+} 
+
